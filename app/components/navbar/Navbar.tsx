@@ -42,7 +42,7 @@ const Navbar: React.FC<Navbar> = ({ loggedIn = false }) => {
 				</div>
 				<div className="hover:underline cursor-pointer transition">Nitro</div>
 				<div className="hover:underline cursor-pointer transition">
-					Disconver
+					Discover
 				</div>
 				<div className="hover:underline cursor-pointer transition">Safety</div>
 				<div className="hover:underline cursor-pointer transition">Support</div>
