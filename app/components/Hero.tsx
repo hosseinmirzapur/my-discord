@@ -30,6 +30,7 @@ const Hero = () => {
 							</div>
 						}
 						size="large"
+						variant="primary"
 					/>
 					<Button
 						label="Open Discord in your browser"
