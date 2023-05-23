@@ -1,14 +1,19 @@
 "use client"
 
 import Image from "next/image"
+import { RxDownload } from "react-icons/rx"
+import { useRouter } from "next/navigation"
+import BlackButton from "./button/BlackButton"
+import WhiteButton from "./button/WhiteButton"
 
 // ** Assets
 import leftImage from "../../public/images/2.svg"
 import rightImage from "../../public/images/3.svg"
-import Button from "./button/Button"
-import { RxDownload } from "react-icons/rx"
 
 const Hero = () => {
+	// ** Variables
+	const router = useRouter()
+
 	return (
 		<div className="relative overflow-hidden pt-20 md:pt-44 pb-40 md:pb-0 bg-[#5865f2]">
 			<div className="absolute text-center text-white flex flex-col gap-12 -mt-14">
@@ -22,21 +27,18 @@ const Hero = () => {
 					hang out more often.
 				</p>
 				<div className="flex flex-col md:flex-row justify-center gap-6 w-8/12 mx-auto md:w-auto">
-					<Button
+					<WhiteButton
 						label={
-							<div className="flex flex-row gap-2">
+							<div
+								className="flex flex-row gap-2"
+								onClick={() => router.push("/download")}>
 								<RxDownload size={28} />
-								Download for Windows
+								Download for Desktop
 							</div>
 						}
 						size="large"
-						variant="primary"
 					/>
-					<Button
-						label="Open Discord in your browser"
-						size="large"
-						variant="secondary"
-					/>
+					<BlackButton label="Open Discord in your browser" size="large" />
 				</div>
 			</div>
 

@@ -3,8 +3,8 @@
 import Image from "next/image"
 import Search from "./Search"
 import { ImMenu } from "react-icons/im"
-import Button from "../button/Button"
 import { useRouter } from "next/navigation"
+import WhiteButton from "../button/WhiteButton"
 
 interface Navbar {
 	loggedIn?: boolean
@@ -52,7 +52,7 @@ const Navbar: React.FC<Navbar> = ({ loggedIn = false }) => {
 
 			<div className="flex flex-row justify-between items-center gap-5">
 				{loggedIn && <Search />}
-				<Button onClick={() => {}} label={"Login"} size="small" />
+				<WhiteButton onClick={() => {}} label={"Login"} size="small" />
 				<ImMenu
 					color="#fff"
 					className="
