@@ -37,7 +37,7 @@ const HomeMiddle: React.FC<HomeMiddleProps> = ({
 				height={imageHeight}
 				alt={title}
 				priority
-				className="md:-mt-20 flex justify-center items-center text-center w-auto h-auto"
+				className="md:-mt-20 "
 			/>
 
 			<div className="flex flex-col gap-10">

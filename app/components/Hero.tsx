@@ -26,7 +26,7 @@ const Hero = () => {
 					spend time together. A place that makes it easy to talk every day and
 					hang out more often.
 				</p>
-				<div className="flex flex-col md:flex-row justify-center gap-6 w-8/12 mx-auto md:w-auto">
+				<div className="flex flex-col md:flex-row justify-center gap-6 w-8/12 mx-auto md:mx-auto">
 					<WhiteButton
 						label={
 							<div

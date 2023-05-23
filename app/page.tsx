@@ -11,7 +11,7 @@ const pageData: HomeMiddleProps[] = [
 		description:
 			"Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.",
 		imageSrc: "/images/part1.svg",
-		className: "flex flex-col md:flex-row gap-14 md:gap-24",
+		className: "flex flex-col lg:flex-row gap-10 md:gap-24",
 		imageHeight: 2000,
 		imageWidth: 2000,
 	},
@@ -20,7 +20,7 @@ const pageData: HomeMiddleProps[] = [
 		description:
 			"Grab a seat in a voice channel when you're free. Friends in your server can see you're around and instantly pop in to talk without having to call.",
 		imageSrc: "/images/part2.svg",
-		className: "flex flex-col md:flex-row-reverse gap-14 md:gap-24",
+		className: "flex flex-col lg:flex-row-reverse gap-10 md:gap-24",
 		imageHeight: 2000,
 		imageWidth: 2000,
 	},
@@ -29,7 +29,7 @@ const pageData: HomeMiddleProps[] = [
 		description:
 			"Get any community running with moderation tools and custom member access. Give members special powers, set up private channels, and more.",
 		imageSrc: "/images/part3.svg",
-		className: "flex flex-col md:flex-row gap-14 md:gap-24",
+		className: "flex flex-col lg:flex-row gap-10 md:gap-24",
 		imageHeight: 2000,
 		imageWidth: 2000,
 	},
@@ -60,7 +60,7 @@ export default function Home() {
 						className={data.className}
 					/>
 				))}
-				<div className="relative flex items-center align-middle justify-center mt-20 md:mt-0">
+				<div className="relative flex items-center align-middle justify-center mt-10 md:-mt-28 mb-10">
 					<Image
 						src={"/images/part5.svg"}
 						alt="sparkles"
@@ -68,7 +68,7 @@ export default function Home() {
 						width={500}
 						height={500}
 					/>
-					<div className="flex flex-col items-center justify-center gap-10 absolute bottom-10">
+					<div className="flex flex-col items-center justify-center gap-10  md:mb-32">
 						<p className="text-center text-3xl font-bold">
 							Ready to start your journey?
 						</p>

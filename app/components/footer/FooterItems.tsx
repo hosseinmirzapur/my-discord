@@ -125,7 +125,7 @@ const footerItems = [
 
 const FooterItems = () => {
 	return (
-		<div className="grid grid-cols-2 md:grid-cols-4 gap-14">
+		<div className="grid grid-cols-2 lg:grid-cols-4 gap-14">
 			{footerItems.map((item, index) => (
 				<div key={index} className="flex flex-col gap-4">
 					<p className="text-[#5865f2] ">{item.title}</p>
