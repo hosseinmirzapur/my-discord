@@ -1,7 +1,9 @@
+import Image from "next/image"
 import Container from "./components/Container"
 import Hero from "./components/Hero"
 import HomeMiddle, { HomeMiddleProps } from "./components/HomeMiddle"
-import Navbar from "./components/navbar/Navbar"
+import BlueButton from "./components/button/BlueButton"
+import { RxDownload } from "react-icons/rx"
 
 const pageData: HomeMiddleProps[] = [
 	{
@@ -45,7 +47,6 @@ const pageData: HomeMiddleProps[] = [
 export default function Home() {
 	return (
 		<>
-			<Navbar />
 			<Hero />
 			<Container className="flex flex-col pt-20 pb-10 md:pt-40 md:pb-20 gap-40 md:gap-80">
 				{pageData.map((data, index) => (
@@ -59,6 +60,29 @@ export default function Home() {
 						className={data.className}
 					/>
 				))}
+				<div className="relative flex items-center align-middle justify-center mt-20 md:mt-0">
+					<Image
+						src={"/images/part5.svg"}
+						alt="sparkles"
+						className="object-contain absolute"
+						width={500}
+						height={500}
+					/>
+					<div className="flex flex-col items-center justify-center gap-10 absolute bottom-10">
+						<p className="text-center text-3xl font-bold">
+							Ready to start your journey?
+						</p>
+						<BlueButton
+							label={
+								<div className="flex flex-row gap-2">
+									<RxDownload size={28} />
+									Download for Desktop
+								</div>
+							}
+							size="large"
+						/>
+					</div>
+				</div>
 			</Container>
 		</>
 	)

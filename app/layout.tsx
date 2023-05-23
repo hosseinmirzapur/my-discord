@@ -1,3 +1,5 @@
+import Footer from "./components/footer/Footer"
+import Navbar from "./components/navbar/Navbar"
 import "./globals.css"
 
 export const metadata = {
@@ -22,7 +24,16 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body
+				style={{
+					scrollBehavior: "smooth",
+				}}>
+				<Navbar />
+
+				{children}
+
+				<Footer />
+			</body>
 		</html>
 	)
 }
