@@ -36,7 +36,7 @@ const LoginForm = () => {
 						Welcome Back!
 					</h1>
 					<p className="opacity-70 text-white text-center font-extralight">
-						We're so excited to see you again!
+						We{"'"}re so excited to see you again!
 					</p>
 				</div>
 
