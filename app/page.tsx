@@ -4,6 +4,8 @@ import Hero from "./components/Hero"
 import HomeMiddle, { HomeMiddleProps } from "./components/HomeMiddle"
 import BlueButton from "./components/button/BlueButton"
 import { RxDownload } from "react-icons/rx"
+import Navbar from "./components/navbar/Navbar"
+import Footer from "./components/footer/Footer"
 
 const pageData: HomeMiddleProps[] = [
 	{
@@ -47,6 +49,7 @@ const pageData: HomeMiddleProps[] = [
 export default function Home() {
 	return (
 		<>
+			<Navbar />
 			<Hero />
 			<Container className="flex flex-col pt-20 pb-10 md:pt-40 md:pb-20 gap-40 md:gap-80">
 				{pageData.map((data, index) => (
@@ -84,6 +87,7 @@ export default function Home() {
 					</div>
 				</div>
 			</Container>
+			<Footer />
 		</>
 	)
 }

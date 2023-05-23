@@ -28,11 +28,7 @@ export default function RootLayout({
 				style={{
 					scrollBehavior: "smooth",
 				}}>
-				<Navbar />
-
 				{children}
-
-				<Footer />
 			</body>
 		</html>
 	)
