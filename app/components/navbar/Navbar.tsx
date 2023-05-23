@@ -52,7 +52,11 @@ const Navbar: React.FC<Navbar> = ({ loggedIn = false }) => {
 
 			<div className="flex flex-row justify-between items-center gap-5">
 				{loggedIn && <Search />}
-				<WhiteButton onClick={() => {}} label={"Login"} size="small" />
+				<WhiteButton
+					onClick={() => router.push("/login")}
+					label={"Login"}
+					size="small"
+				/>
 				<ImMenu
 					color="#fff"
 					className="
