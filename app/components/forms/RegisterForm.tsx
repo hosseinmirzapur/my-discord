@@ -97,13 +97,13 @@ const RegisterForm = () => {
 					<p className="text-[11px]">
 						I have read and agree to Discord{"'"}s{" "}
 						<a
-							href="/terms"
+							href="https://discord.com/terms"
 							className="text-blue-500 hover:underline underline-offset-1">
 							Terms of Service
 						</a>{" "}
 						and{" "}
 						<a
-							href="/privacy"
+							href="https://discord.com/privacy"
 							className="text-blue-500 hover:underline underline-offset-1">
 							Privacy Policy
 						</a>
