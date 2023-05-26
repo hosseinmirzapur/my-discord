@@ -48,8 +48,8 @@ const pageData: HomeMiddleProps[] = [
 
 export default function Home() {
 	return (
-		<>
-			<Navbar />
+		<div>
+			<Navbar classname="bg-[#5865f2]" />
 			<Hero />
 			<Container className="flex flex-col pt-20 pb-10 md:pt-40 md:pb-20 gap-40 md:gap-80">
 				{pageData.map((data, index) => (
@@ -88,6 +88,6 @@ export default function Home() {
 				</div>
 			</Container>
 			<Footer />
-		</>
+		</div>
 	)
 }

@@ -8,31 +8,32 @@ import WhiteButton from "../button/WhiteButton"
 
 interface Navbar {
 	loggedIn?: boolean
+	classname?: string
 }
 
-const Navbar: React.FC<Navbar> = ({ loggedIn = false }) => {
+const Navbar: React.FC<Navbar> = ({ loggedIn = false, classname }) => {
 	// ** Variables
 	const router = useRouter()
 
 	return (
 		<div
-			className="
+			className={`
                 flex
                 flex-row
                 justify-between
                 items-center
                 h-[80px]
-                px-6
-                md:px-20
+				px-5
                 lg:px-44
-                bg-[#5865f2]
-            ">
+				${classname}
+			`}>
 			<div onClick={() => router.push("/")} className="cursor-pointer">
 				<Image
 					src={"/images/discord-logo-white.png"}
 					alt="Discord Logo"
 					width={125}
 					height={125}
+					className="object-contain"
 				/>
 			</div>
 
@@ -40,7 +41,11 @@ const Navbar: React.FC<Navbar> = ({ loggedIn = false }) => {
 				<div className="hover:underline cursor-pointer transition">
 					Download
 				</div>
-				<div className="hover:underline cursor-pointer transition">Nitro</div>
+				<div
+					className="hover:underline cursor-pointer transition"
+					onClick={() => router.push("/nitro")}>
+					Nitro
+				</div>
 				<div className="hover:underline cursor-pointer transition">
 					Discover
 				</div>
