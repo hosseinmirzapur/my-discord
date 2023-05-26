@@ -5,9 +5,16 @@ export interface ButtonProps {
 	onClick?: () => void
 	size?: "small" | "medium" | "large"
 	className?: string
+	disabled?: boolean
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, size, className }) => {
+const Button: React.FC<ButtonProps> = ({
+	label,
+	onClick,
+	size,
+	className,
+	disabled,
+}) => {
 	const textSize = () => {
 		switch (size) {
 			case "small":
@@ -22,7 +29,8 @@ const Button: React.FC<ButtonProps> = ({ label, onClick, size, className }) => {
 	}
 
 	return (
-		<div
+		<button
+			disabled={disabled}
 			onClick={onClick}
 			className={`
 				${className}
@@ -41,7 +49,7 @@ const Button: React.FC<ButtonProps> = ({ label, onClick, size, className }) => {
                 
         `}>
 			<div className={`${size === "small" ? "px-4" : "px-6"}`}>{label}</div>
-		</div>
+		</button>
 	)
 }
 

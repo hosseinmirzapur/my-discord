@@ -30,6 +30,7 @@ const Footer = () => {
 					<BlueButton
 						label={<p className="font-sans]">Sign up</p>}
 						size="small"
+						onClick={() => router.push("/register")}
 					/>
 				</div>
 			</Container>

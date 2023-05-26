@@ -5,13 +5,22 @@ import Image from "next/image"
 import { useState } from "react"
 import Input from "../inputs/Input"
 import BlueButton from "../button/BlueButton"
+import { useRouter } from "next/navigation"
+import { motion } from "framer-motion"
 
 const LoginForm = () => {
+	const router = useRouter()
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 
 	return (
-		<div
+		<motion.div
+			initial={{ marginTop: "-200px", opacity: "0%" }}
+			whileInView={{
+				opacity: 1,
+				marginTop: 0,
+			}}
+			transition={{ duration: 0.2 }}
 			className="
                 fixed
                 top-[50%]
@@ -56,9 +65,7 @@ const LoginForm = () => {
 					/>
 				</div>
 				<div className="mt-5 lg:mt-2 flex flex-col gap-3">
-					<p
-						className="hover:underline text-blue-500 text-sm cursor-pointer font-medium w-auto"
-						title="idgaf">
+					<p className="hover:underline text-blue-500 text-sm cursor-pointer font-medium w-auto">
 						Forgot your password?
 					</p>
 					<BlueButton
@@ -67,7 +74,9 @@ const LoginForm = () => {
 					/>
 					<div className="text-white font-extralight text-sm flex gap-1">
 						<p className="opacity-50">Need an account?</p>{" "}
-						<p className="hover:underline text-blue-500 text-sm cursor-pointer font-medium w-auto">
+						<p
+							className="hover:underline text-blue-500 text-sm cursor-pointer font-medium w-auto"
+							onClick={() => router.push("/register")}>
 							Register
 						</p>
 					</div>
@@ -87,7 +96,7 @@ const LoginForm = () => {
 					Scan this with the Discord mobile app to log in instantly
 				</p>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 
