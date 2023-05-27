@@ -17,6 +17,7 @@ const NitroHero = () => {
                 bg-gradient-to-b
                 from-blue-600
                 to-purple-400
+                
         ">
 			<video className="hidden lg:block" autoPlay loop muted>
 				<source src="/videos/hero.webm" type="video/webm" />
@@ -57,6 +58,8 @@ const NitroHero = () => {
                     object-contain
                     block
                     lg:hidden
+                    pb-80
+                    lg:pb-0
                 "
 			/>
 		</div>
