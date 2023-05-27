@@ -21,6 +21,9 @@ const NitroPlan: React.FC<NitroPlanProps> = ({ items, title, className }) => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 0.5 }}
+			viewport={{
+				once: true,
+			}}
 			className={`
                 ${className}
                 w-10/12

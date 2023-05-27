@@ -1,6 +1,7 @@
-import NitroPlan, { NitroItem } from "../components/NitroPlan"
-import NitroHero from "../components/hero/NitroHero"
 import Navbar from "../components/navbar/Navbar"
+import NitroHero from "../components/hero/NitroHero"
+import NitroPlan, { NitroItem } from "../components/NitroPlan"
+import WhatsNew from "../components/WhatsNew"
 
 const nitroBasicItems: NitroItem[] = [
 	{
@@ -73,6 +74,7 @@ const NitroPage = () => {
 					"
 				/>
 			</div>
+			<WhatsNew />
 		</>
 	)
 }
